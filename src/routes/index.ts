@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import user from './user'
 import {userStore} from "../stores/user.ts";
+import contract from "./contract.ts";
 
 const routes = [
   {
@@ -29,6 +30,7 @@ const routes = [
     },
   },
   ...user,
+  ...contract,
 ];
 
 const index = createRouter({

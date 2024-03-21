@@ -14,16 +14,16 @@ const items = ref([
   {
     key: '1',
     icon: () => h(HomeOutlined),
-    label: 'Home Page',
+    label: 'ພາບລວມ',
     title: 'Home Page',
     route: '/'
   },
   {
     key: '2',
     icon: () => h(HomeOutlined),
-    label: 'Sell',
-    title: 'Sell',
-    route: '/sell'
+    label: 'ສັນຍາ',
+    title: 'Contract',
+    route: '/contract'
   },
   {
     key: 'sub1',
