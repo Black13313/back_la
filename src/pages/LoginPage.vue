@@ -82,14 +82,6 @@ const formState = reactive<UserModel>({
 const onFinish = () => {
   const login = user.login(formState.email, formState.password)
 
-  if (login === 1) {
-    return message.error('Email and password incorrect!')
-  }
-
-  if (login === 2) {
-    return message.error('Your user is not active!')
-  }
-
   // redirect to home page
   router.push('/')
 };

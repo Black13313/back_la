@@ -1,18 +1,12 @@
 <script lang="ts" setup>
-import {h, ref, watch} from 'vue';
+import {h, ref} from 'vue';
 import {
-  MailOutlined,
-  CalendarOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
   HomeOutlined,
   UserOutlined
 } from '@ant-design/icons-vue';
 import type {MenuTheme} from 'ant-design-vue';
-import {layoutStore} from "../../stores/layout.ts";
 import router from '../../routes'
 
-const layout = layoutStore()
 const theme = ref<MenuTheme>('dark');
 const selectedKeys = ref(['1']);
 const openKeys = ref(['1']);
@@ -51,37 +45,9 @@ const items = ref([
       },
     ],
   },
-  {
-    key: 'sub2',
-    icon: () => h(AppstoreOutlined),
-    label: 'Products',
-    title: 'Products',
-    children: [
-      {
-        key: '7',
-        label: 'Product List',
-        title: 'Product List',
-        route: '/product'
-      },
-      {
-        key: '8',
-        label: 'Catalog',
-        title: 'Catalog',
-        route: '/product/catalog'
-      },
-      {
-        key: '9',
-        label: 'Unit',
-        title: 'Unit',
-        route: '/product/unit'
-      },
-    ],
-  },
+
 ]);
 
-watch(() => layout.theme, (val) => {
-  theme.value = val
-})
 
 const onMenuSelected = (data: any) => {
   router.push(data.item.route)

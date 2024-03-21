@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import product from './product'
 import user from './user'
 import {userStore} from "../stores/user.ts";
 
@@ -10,15 +9,6 @@ const routes = [
     component: () => import("../pages/HomePage.vue"),
     meta: {
       title: "Home Page",
-      requireAuth: true
-    },
-  },
-  {
-    name: "SellPage",
-    path: "/sell",
-    component: () => import("../pages/SellPage.vue"),
-    meta: {
-      title: "Sell Page",
       requireAuth: true
     },
   },
@@ -38,23 +28,6 @@ const routes = [
       title: "Login Page",
     },
   },
-  {
-    name: "RegisterVerifyPage",
-    path: "/register/verify",
-    component: () => import("../pages/VerifyPage.vue"),
-    meta: {
-      title: "Register Verify Page",
-    },
-  },
-  {
-    name: "ForgotPasswordVerifyPage",
-    path: "/forgot-password/verify",
-    component: () => import("../pages/VerifyPage.vue"),
-    meta: {
-      title: "Forgot Password Verify Page",
-    },
-  },
-  ...product,
   ...user,
 ];
 

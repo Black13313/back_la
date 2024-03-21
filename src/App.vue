@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import {userStore} from "./stores/user.ts";
-import SideMenu from "./components/layout/SideMenu.vue";
-import Header from "./components/layout/Header.vue";
-import Content from "./components/layout/Content.vue";
-import Footer from "./components/layout/Footer.vue";
+
 import {useRoute} from "vue-router";
 import {onBeforeMount, onBeforeUpdate, onMounted, ref} from "vue";
 import MainLayout from "./components/layout/MainLayout.vue";
