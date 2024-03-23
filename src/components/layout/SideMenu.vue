@@ -19,32 +19,68 @@ const items = ref([
     route: '/'
   },
   {
-    key: '2',
+    key: '8',
     icon: () => h(HomeOutlined),
-    label: 'ສັນຍາ',
-    title: 'Contract',
-    route: '/contract'
+    label: 'ງານສຳເລັດ',
+    title: 'Home Page',
+    route: '/'
   },
+
   {
-    key: 'sub1',
+    key: 'sub2',
     icon: () => h(UserOutlined),
-    label: 'Users',
-    title: 'Users',
+    label: 'ຈັດການສັນຍາ',
+    title: 'Contract',
     children: [
       {
         key: '3',
-        label: 'User List',
+        label: 'ສ້າງສັນຍາ',
+        title: 'ສັນຍາ',
+        route: '/add_contract'
+      },
+      {
+        key: '4',
+        label: 'ສັນຍາ',
+        title: 'ສັນຍາ',
+        route: '/contract'
+      },
+
+    ],
+  },
+
+  {
+    key: 'sub6',
+    icon: () => h(UserOutlined),
+    label: 'ຈັດການຜູ້ໃຊ້',
+    title: 'Users',
+    children: [
+      {
+        key: '7',
+        label: 'ຜູ້ໃຊ້ທັງຫມົດ',
         title: 'User List',
         route: '/user'
       },
       {
-        key: '4',
-        label: 'Role',
+        key: '8',
+        label: 'ສິນນຳໃຊ້',
+        title: 'Role',
+        route: '/user/role'
+      },
+      {
+        key: '5',
+        label: 'ຈັດການເອກະສານຟີຣແລຣນ',
+        title: 'document',
+        route: '/document/lance'
+      },
+      {
+        key: '6',
+        label: 'ຟີແລຣນທັງໜົດ',
         title: 'Role',
         route: '/user/role'
       },
     ],
   },
+
 
 ]);
 

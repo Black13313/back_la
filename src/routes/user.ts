@@ -17,4 +17,13 @@ export default [
       requireAuth: true
     },
   },
+  {
+    name: "Document Lance",
+    path: "/document/lance",
+    component: () => import("../pages/Document/Document_lance.vue"),
+    meta: {
+      title: "Document Lance Page",
+      requireAuth: true
+    },
+  },
 ];
